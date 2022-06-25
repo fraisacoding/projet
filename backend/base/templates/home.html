@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %} Skateme {% endblock %}
+{% block content %}
+<div class="container text-primary">
+<div class="jumbotron mt-5">
+  <h1 class="display-4">Welcome to skateme</h1>
+  <p class="lead">You couldn't find a website that provides you with vintage ,professional and fashioned  skates</p>
+  <p><h2>here it is SKATEME is the ONE</h2></p>
+  <hr class="my-4">
+  <p>Check our products to see what I'm talking about</p>
+  <a class="btn btn-secondary btn-lg" href="{% url 'products' %}}" role="button">See products here</a>
+</div>
+</div>
+{% endblock %}

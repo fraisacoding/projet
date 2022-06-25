@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}Product details{% endblock %}
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col">
+            <h1>Product number {{prod.id}}</h1>
+            <div class="row">
+                <dd class="col-md-6">Product name:</dd>
+                <dd class="col-md-6">{{prod.name}}</dd>
+                <dd class="col-md-6">Category:</dd>
+                <dd class="col-md-6">{{prod.category}}</dd>
+                <dd class="col-md-6">Price:</dd>
+                <dd class="col-md-6">{{prod.price}}</dd>
+                <dd class="col-md-6">Stock:</dd>
+                <dd class="col-md-6">{{prod.countInStock}}</dd>
+                <dd class="col-md-6">Number of reviews:</dd>
+                <dd class="col-md-6">{{prod.numReviews}}</dd>
+                <dd class="col-md-6">Rating:</dd>
+                <dd class="col-md-6">{{prod.rating}}</dd>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

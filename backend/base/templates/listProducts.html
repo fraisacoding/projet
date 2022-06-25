@@ -1,0 +1,39 @@
+{% extends 'base.html'%}
+{% block title %}Products {% endblock %}
+{% block content %}
+<div class="container mt-5">
+<h1>Our newest products</h1>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Price</th>
+        <th scope="col">Basket</th>
+
+
+
+    </tr>
+  </thead>
+    <tbody>
+{% for elmt in prod %}
+<tr>
+
+    <td>
+        <a href="{% url 'products_details' elmt.id %}">{{elmt.id}}</a>
+    </td>
+    <td>{{elmt.name}}</td>
+    <td>{{elmt.category}}</td>
+    <td>{{elmt.price}}</td>
+    <td>
+       <a class="btn btn-secondary btn-lg" href="{% url 'Add_product' elmt.id %}" role="button">Add product</a>
+    </td>
+</tr>
+{% endfor %}
+
+    </tbody>
+</table>
+    </div>
+{% endblock %}
+
